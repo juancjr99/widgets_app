@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
-import 'package:widgets_app/config/theme/router/app-router.dart';
+import 'package:widgets_app/config/theme/router/app_router.dart';
 
 
 
