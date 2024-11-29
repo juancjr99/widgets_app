@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/home/home_screen.dart';
 
 
 class ButtonsScreen extends StatelessWidget {
@@ -15,7 +14,7 @@ class ButtonsScreen extends StatelessWidget {
       ),
       body: _ButtomsView(),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.arrow_back_ios_new_rounded),
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
         onPressed: (){
           context.pop();
         }),
@@ -31,7 +30,6 @@ class _ButtomsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final colors = Theme.of(context).colorScheme;
     return SizedBox(
       width: double.infinity,
       child: Padding(
@@ -56,9 +54,9 @@ class _ButtomsView extends StatelessWidget {
 
             TextButton(onPressed: (){}, child: const Text('Text')),
 
-            TextButton.icon(onPressed: (){}, label: const Text('Text icon'),icon: Icon(Icons.person)),
+            TextButton.icon(onPressed: (){}, label: const Text('Text icon'),icon: const Icon(Icons.person)),
 
-            CustomButtom(),
+            const CustomButton(),
 
 
             IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration_rounded),),
@@ -71,8 +69,8 @@ class _ButtomsView extends StatelessWidget {
   }
 }
 
-class CustomButtom extends StatelessWidget {
-  const CustomButtom({super.key});
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,9 +81,9 @@ class CustomButtom extends StatelessWidget {
         color: colors.primary,
         child: InkWell(
           onTap: (){},
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text("Custom Buttom", style: TextStyle(color: Colors.white))),
+          child: const Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text("Custom Button", style: TextStyle(color: Colors.white))),
         ),
       ),
     );
