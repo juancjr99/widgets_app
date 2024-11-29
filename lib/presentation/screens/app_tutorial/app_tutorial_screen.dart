@@ -87,7 +87,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
             bottom: 20,
             child: FadeInRight(
               from: 15,
-              delay: const Duration(milliseconds: 500),
+              delay: const Duration(milliseconds: 300),
               child: FilledButton(
                 onPressed: () => context.pop(),
                 child: Text('Comenzar'))) ,): const SizedBox(),
@@ -121,8 +121,8 @@ final captionStyle = Theme.of(context).textTheme.bodySmall;
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image(image: AssetImage('assets/images/1.png')),
-            Icon(Icons.image_not_supported_outlined),
+            Image(image: AssetImage(imageUrl)),
+
             const SizedBox(height: 20,),
             Text(title,style: titleStyle,),
             const SizedBox(height: 20,),
